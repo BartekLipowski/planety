@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: grey;
+            background-image: url(tlo.png);
+            background-position: center center;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        .slonce{
+            background-image: url(sun.png);
+            background-position: center center;
+            z-index: 500;
+            border-radius: 100%;
+            position: absolute;
+            width: 15vh;
+            height: 15vh;
+            top: calc(50vh - 5vh);
+            left: calc(50vw - 5vw);
+            transform-origin: center;
+            animation: slonce 25s linear infinite;
+
+        }
+        @keyframes slonce {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+    
+            
+            
+        }
+        .planeta{
+            border-radius: 100%;
+            position: absolute;
+        }
+        .mars{
+            z-index: 600;
+            background-image: url(4.png);
+            background-position: center center;
+            border-radius: 100%;
+            position: absolute;
+            width: 5vh;
+            height: 5vh;
+            top: calc(50vh - 2vh);
+            left: calc(10vw - 2vw);
+            animation: mars 6s infinite ease-in-out
+        }
+        
+        @keyframes mars {
+            0% {left: calc(10vw - 2vw); z-index: 600;}
+          
+            50% {left: calc(90vw - 2vw);}
+       
+            100% {left: calc(10vw - 2vw);z-index: 400;}
+        }
+        .wenus{ 
+            z-index: 450;
+            background-image: url(3.png);
+            background-position: center center;
+            border-radius: 100%;
+            position: absolute;
+            width: 4vh;
+            height: 4vh;
+            top: calc(50vh - 1.5vh);
+            left: calc(10vw - 1.5vw);
+            animation: wenus 4s infinite ease-in-out
+        }
+
+        @keyframes wenus {
+            0% {left: calc(20vw - 1.5vw); z-index: 550;}
+          
+            50% {left: calc(90vw - 1.5vw);}
+       
+            100% {left: calc(20vw - 1.5vw); z-index: 450;}
+        }
+
+        .merkury{ 
+            z-index: 700;
+            background-image: url(1.png);
+            background-position: center center;
+            border-radius: 100%;
+            position: absolute;
+            width: 2.5vh;
+            height: 2.5vh;
+            top: calc(50vh - 1.5vh);
+            left: calc(10vw - 1.5vw);
+            animation: merkury 4s infinite ease-in-out
+        }
+
+        @keyframes merkury {
+            0% {left: calc(5vw - 1.5vw); z-index: 550;}
+          
+            50% {left: calc(90vw - 1.5vw);}
+       
+            100% {left: calc(5vw - 1.5vw); z-index: 450;}
+        }
+        .ziemia{ 
+            z-index: 750;
+            background-image: url(2.1.png);
+            background-position: center center;
+            border-radius: 100%;
+            position: absolute;
+            width: 6vh;
+            height: 6vh;
+            top: calc(50vh - 1.5vh);
+            left: calc(10vw - 1.5vw);
+            animation: ziemia 8s infinite ease-in-out;
+        }
+
+        @keyframes ziemia {
+            0% {
+                left: calc(15vw - 1.5vw); z-index: 650;
+                transform: rotate(0deg);
+                left: calc(15vw - 2vh);
+            }
+          
+            50% {left: calc(90vw - 1.5vw);}
+       
+            100% {left: calc(15vw - 1.5vw); z-index: 450;
+                transform: rotate(360deg);
+                left: calc(15vw - 2vh); /* Utrzymanie pozycji względem Ziemi */
+            }
+        }
+        .ksiezyc {
+            background-image: url(moon.png);  /* Dodaj odpowiedni obrazek Księżyca */
+            background-position: center center;
+            border-radius: 50%;
+            position: absolute;
+            width: 2vh;
+            height: 2vh;
+            top: calc(50vh - 2vh); /* Wyrównanie do Ziemi */
+            left: calc(15vw - 2vh); /* W odległości od Ziemi */
+            animation: ksiezyc 5s infinite linear;
+        }
+
+        @keyframes ksiezyc  {
+            0% {
+                transform: rotate(0deg);
+                left: calc(15vw - 2vh);
+            }
+            100% {
+                transform: rotate(360deg);
+                left: calc(15vw - 2vh); /* Utrzymanie pozycji względem Ziemi */
+            }
+        }
+        
+
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="slonce"></div>
+
+    <div class="planeta wenus"></div>
+    <div class="planeta mars"></div>
+    <div class="planeta merkury"></div>
+    <div class="planeta ziemia"></div>
+    <div class="ksiezyc"></div> 
+</body>
+</html>
